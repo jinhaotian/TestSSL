@@ -43,10 +43,10 @@ public class TestSSL {
     
     public static void main(String[] args) {
         try {
-            String ksFile = "private.p12";
-            String ksPassword = "password";
-            String tsFile = "trustStore";
-            String tsPassword = "password";
+            String ksFile = args[1];
+            String ksPassword = args[2];
+            String tsFile = args[3];
+            String tsPassword = args[4];
             String tlsVerion = "TLSv1.2";
             //Both Keystore and TrustStore, apache httpclient
             SSLConnectionSocketFactory sslConSocFactory = initSSLFactory(ksFile, ksPassword, tsFile,
